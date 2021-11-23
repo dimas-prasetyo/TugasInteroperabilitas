@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/main_background"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/primary_light">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#5A5A5A"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1"
+            app:sliderStartAutoCycle="true" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/layout_menu_1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/card_view_banner"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@id/card_view_banner">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_rumah_sakit"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_hospital_location"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                app:tint="@color/primary_light" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="70dp"
+                android:textSize="18sp"
+                style="@style/textPrimary"
+                android:textStyle="bold"
+                android:text="Rumah Sakit"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_registrasi"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_daftar_2"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                app:tint="@color/primary_light" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="70dp"
+                android:textSize="18sp"
+                style="@style/textPrimary"
+                android:textStyle="bold"
+                android:text="Register"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_statistik"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_statistik"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                app:tint="@color/primary_light" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="70dp"
+                android:textSize="18sp"
+                style="@style/textPrimary"
+                android:textStyle="bold"
+                android:text="Statistik"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_menu_2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout_menu_1"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@id/card_view_banner">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_menu_berita"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_news"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                app:tint="@color/primary_light" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="70dp"
+                android:textSize="18sp"
+                style="@style/textPrimary"
+                android:textStyle="bold"
+                android:text="Berita"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_menu_hotline"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_call"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                app:tint="@color/primary_light" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="70dp"
+                android:textSize="18sp"
+                style="@style/textPrimary"
+                android:textStyle="bold"
+                android:text="Hotline"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_menu_pengguna"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:layout_marginRight="20dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_user"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                app:tint="@color/primary_light" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="70dp"
+                android:textSize="18sp"
+                style="@style/textPrimary"
+                android:textStyle="bold"
+                android:text="Pengguna"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

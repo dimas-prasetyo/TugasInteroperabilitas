@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/root_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="0dp"
+                app:cardCornerRadius="5dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/txt_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Nama Rumah Sakit"
+                android:layout_toRightOf="@id/card_view_image"
+                android:layout_alignTop="@id/card_view_image"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                style="@style/textPrimary"/>
+
+            <TextView
+                android:id="@+id/txt_stok"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Stok"
+                android:layout_alignLeft="@id/txt_nama"
+                android:layout_below="@id/txt_nama"
+                android:textSize="14sp"
+                style="@style/textSecondary"/>
+
+            <TextView
+                android:id="@+id/txt_jarak"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="100 m"
+                android:layout_alignLeft="@id/txt_nama"
+                android:layout_below="@id/txt_stok"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                style="@style/textPrimary"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

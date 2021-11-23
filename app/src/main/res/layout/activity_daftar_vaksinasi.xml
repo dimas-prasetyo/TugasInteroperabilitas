@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaftarVaksinasiActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/main_background"/>
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="6dp"
+        android:src="@drawable/icon_back"
+        android:translationZ="90dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/txt_nik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textPrimary"
+        android:text="NIK"
+        android:textSize="18sp"
+        android:layout_below="@id/btn_back"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@id/card_view_nik"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_nik"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="0dp"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@id/txt_nik"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <EditText
+            android:id="@+id/input_nik"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Masukkan NIK"
+            android:textSize="18sp"
+            style="@style/textPrimary"
+            android:inputType="number"
+            android:padding="5dp"
+            android:background="@null"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/txt_foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textPrimary"
+        android:text="Foto"
+        android:textSize="18sp"
+        android:layout_below="@id/card_view_nik"
+        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@id/card_view_nik"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_foto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:elevation="0dp"
+        app:cardCornerRadius="5dp"
+        android:layout_below="@id/txt_foto"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/card_view_nik"
+        android:layout_alignRight="@id/card_view_nik">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/icon_image_mini"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_btn_daftar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_alignLeft="@id/card_view_nik"
+        android:layout_alignRight="@id/card_view_nik"
+        android:backgroundTint="@color/primary_light"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/btn_daftar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Daftar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
