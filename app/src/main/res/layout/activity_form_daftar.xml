@@ -20,4 +20,568 @@
         android:translationZ="90dp"
         android:layout_margin="10dp"/>
 
+    <TextView
+        android:id="@+id/btn_daftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/primary_light"
+        android:text="Daftar"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/btn_back"
+        android:layout_alignBottom="@id/btn_back"
+        android:gravity="center_vertical"
+        android:layout_marginRight="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_p1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_1"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textAlignment="gravity"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="2"
+                    android:layout_marginRight="50dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_2"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p2_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p2_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="2"
+                    android:layout_marginRight="20dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_3"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p3_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_4"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p4_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p4_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_5_1"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p5_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p5_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_6"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p6_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p6_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_7"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p7_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p7_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_8"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p8_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p8_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_9"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p9_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p9_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_10"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p10_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p10_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_11"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p11_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p11_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_12"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p12_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p12_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txt_p13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pertanyaan_13"
+                style="@style/textSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="gravity"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_p13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/r_btn_p13_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:tag="1"
+                    android:layout_marginRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/r_btn_p13_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    style="@style/textPrimary"
+                    android:textStyle="bold"
+                    android:tag="2"
+                    android:textSize="18sp"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </RelativeLayout>

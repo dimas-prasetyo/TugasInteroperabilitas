@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">TugasInteroperabilitas</string>
+
+    <string name="pertanyaan_1">Apakah ada kontak dengan orang yang sedang dalam pemeriksaan/terkonfirmasi/sedang dalam perawatan karena penyakit COVID-19 dalam waktu 14 hari terakhir?</string>
+    <string name="pertanyaan_2">Jika pertanyaan nomor 1 (satu) Ya dan mengalami gejala demam batuk/pilek/sesak napas dalam 7 hari terakhir?</string>
+    <string name="pertanyaan_3">Apakah Anda pernah terkonfirmasi menderita COVID-19?</string>
+    <string name="pertanyaan_4">Apakah Anda sedang hamil?</string>
+    <string name="pertanyaan_5_1">Apakah Anda memiliki riwayat alergi berat seperti sesak napas, bengkak dan urtikaria seluruh badan atau reaksi berat lainnya karena vaksin?</string>
+    <string name="pertanyaan_5_2">Apakah Anda memiliki riwayat alergi berat atau mengalami gejala sesak napas, bengkak dan urtikaria seluruh badan setelah divaksinasi COVID-19 sebelumnya?</string>
+    <string name="pertanyaan_6">Apakah Anda sedang menderita penyakit jantung, penyakit ginjal kronis/cuci darah dan penyakit hati/liver?</string>
+    <string name="pertanyaan_7">Apakah Anda sedang menderita dan mendapat pengobatan penyakit kanker?</string>
+    <string name="pertanyaan_8">Apakah Anda sedang mendapat pengobatan untuk gangguan pembekuan darah, defisiensi imun dan penerima produk darah/transfusi?</string>
+    <string name="pertanyaan_9">Apakah Anda memiliki riwayat penyakit epilepsi?</string>
+    <string name="pertanyaan_10">Apakah Anda menderita penyakit Diabetes Melitus?</string>
+    <string name="pertanyaan_11">Apakah Anda menderita HIV?</string>
+    <string name="pertanyaan_12">Apakah Anda memiliki penyakit paru (asma, PPOK)?</string>
+    <string name="pertanyaan_13">Apakah Anda mendapatkan vaksinasi lain kurang dari satu bulan ke belakang?</string>
+
+
+    <string name="skrining_1">Kontak dengan penderita COVID-19</string>
+    <string name="skrining_2">Mengalami gejala COVID-19</string>
+    <string name="skrining_3">Pernah Terkonfirmasi COVID-19</string>
+    <string name="skrining_4">Sedang Hamil</string>
+    <string name="skrining_5_1">Memiliki riwayat alergi berat terhadap vaksin</string>
+    <string name="skrining_5_2">Memiliki riwayat alergi berat setelah vaksin COVID-19 pertama</string>
+    <string name="skrining_6">Menderita Penyakit Jantung</string>
+    <string name="skrining_7">Menderita Penyakit Kanker</string>
+    <string name="skrining_8">Menderita Gangguan Pemebekuan Darah</string>
+    <string name="skrining_9">Menderita Penyakit Epilepsi</string>
+    <string name="skrining_10">Menderita Penyakit Diabetes Melitus</string>
+    <string name="skrining_11">Menderita Penyakit HIV</string>
+    <string name="skrining_12">Menderita Penyakit Paru</string>
+    <string name="skrining_13">Mendapatkan vaksinasi lain kurang dari satu bulan ke belakang</string>
 </resources>

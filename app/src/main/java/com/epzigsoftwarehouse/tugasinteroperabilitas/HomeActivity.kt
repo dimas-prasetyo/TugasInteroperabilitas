@@ -56,7 +56,7 @@ class HomeActivity : AppCompatActivity() {
         val displayMetrics = this.resources.displayMetrics
 
         widthScreen = displayMetrics.widthPixels
-        card_view_banner.getLayoutParams().height = widthScreen / 2
+        card_view_banner.getLayoutParams().height = widthScreen / 2 - 30
 
         renewItems(imageSlider)
 

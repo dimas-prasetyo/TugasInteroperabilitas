@@ -15,7 +15,8 @@ class DaftarVaksinasiActivity : AppCompatActivity() {
         }
 
         btn_daftar.setOnClickListener {
-            val intent = Intent(this, FormDaftarActivity::class.java)
+            val intent = Intent(this, FormSkriningActivity::class.java)
+            intent.putExtra("nik", input_nik.text.toString())
             startActivity(intent)
         }
     }

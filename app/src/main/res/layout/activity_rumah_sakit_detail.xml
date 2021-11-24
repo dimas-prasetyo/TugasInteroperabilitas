@@ -95,8 +95,7 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:translationZ="90dp"
-        android:background="@color/colorWhiteBackground"
-        android:layout_margin="20dp">
+        android:background="@color/colorWhiteBackground">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -104,7 +103,9 @@
             android:layout_weight="1"
             app:cardCornerRadius="5dp"
             android:elevation="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:id="@+id/btn_cek_lokasi"
@@ -124,7 +125,9 @@
             android:layout_weight="1"
             app:cardCornerRadius="5dp"
             android:elevation="10dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
 
             <TextView
                 android:id="@+id/btn_daftar"
