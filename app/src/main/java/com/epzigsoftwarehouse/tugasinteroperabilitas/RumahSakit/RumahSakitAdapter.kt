@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.epzigsoftwarehouse.tugasinteroperabilitas.FormSkriningActivity
 import com.epzigsoftwarehouse.tugasinteroperabilitas.R
 import com.epzigsoftwarehouse.tugasinteroperabilitas.RumahSakitDetailActivity
 import com.squareup.picasso.Picasso
@@ -19,7 +20,7 @@ import kotlinx.android.synthetic.main.layout_rumah_sakit_list.view.*
 import java.time.LocalDate
 
 
-class RumahSakitAdapter(val context: Context?, val items: ArrayList<RumahSakit>) : RecyclerView.Adapter<RumahSakitAdapter.ViewHolder>() {
+class RumahSakitAdapter(val context: Context?, val items: ArrayList<RumahSakit>, val nikPeserta: String) : RecyclerView.Adapter<RumahSakitAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -70,10 +71,18 @@ class RumahSakitAdapter(val context: Context?, val items: ArrayList<RumahSakit>)
 
         holder.root_card_view.setOnClickListener {
 
-            val manageDetailIntent = Intent(context, RumahSakitDetailActivity::class.java)
-            manageDetailIntent.putExtra("id", item.id.toString())
+            if (nikPeserta == "0" || nikPeserta == null){
+                val manageDetailIntent = Intent(context, RumahSakitDetailActivity::class.java)
+                manageDetailIntent.putExtra("id", item.id.toString())
 
-            context?.startActivity(manageDetailIntent)
+                context?.startActivity(manageDetailIntent)
+            } else {
+                val manageDetailIntent = Intent(context, FormSkriningActivity::class.java)
+                manageDetailIntent.putExtra("id", item.id.toString())
+                manageDetailIntent.putExtra("nik", nikPeserta)
+
+                context?.startActivity(manageDetailIntent)
+            }
         }
 
     }

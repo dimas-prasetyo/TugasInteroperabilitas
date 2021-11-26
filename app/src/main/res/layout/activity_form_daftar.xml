@@ -96,6 +96,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textAlignment="gravity"
+                android:visibility="gone"
                 android:layout_marginTop="20dp"/>
 
             <RadioGroup
@@ -103,6 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:visibility="gone"
                 android:layout_marginTop="5dp">
 
                 <RadioButton
@@ -576,7 +578,8 @@
                     style="@style/textPrimary"
                     android:textStyle="bold"
                     android:tag="2"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp"
+                    android:layout_marginBottom="20dp"/>
 
             </RadioGroup>
 

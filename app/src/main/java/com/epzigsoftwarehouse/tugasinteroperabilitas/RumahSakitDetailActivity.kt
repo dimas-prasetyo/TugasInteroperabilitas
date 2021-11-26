@@ -40,6 +40,7 @@ class RumahSakitDetailActivity : AppCompatActivity() {
 
         btn_daftar.setOnClickListener {
             val intent = Intent(this, DaftarVaksinasiActivity::class.java)
+            intent.putExtra("id", id_rumah_sakit.toString())
             startActivity(intent)
         }
     }

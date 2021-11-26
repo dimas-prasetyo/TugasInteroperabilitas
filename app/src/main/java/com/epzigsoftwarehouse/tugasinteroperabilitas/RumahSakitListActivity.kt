@@ -14,11 +14,13 @@ import kotlinx.android.synthetic.main.activity_rumah_sakit_list.*
 
 class RumahSakitListActivity : AppCompatActivity() {
     private lateinit var rumahSakitAdapter: RumahSakitAdapter
+    private lateinit var nik_peserta: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rumah_sakit_list)
 
+        nik_peserta = intent.getStringExtra("nik").toString()
         recycler_view_rumah_sakit_list.hasFixedSize()
         recycler_view_rumah_sakit_list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL ,false)
 
@@ -38,7 +40,7 @@ class RumahSakitListActivity : AppCompatActivity() {
 
                     val rumahSakitList: ArrayList<RumahSakit> = data
 
-                    rumahSakitAdapter = RumahSakitAdapter(this@RumahSakitListActivity, rumahSakitList)
+                    rumahSakitAdapter = RumahSakitAdapter(this@RumahSakitListActivity, rumahSakitList, nik_peserta)
 
                     Thread(Runnable {
                         this@RumahSakitListActivity?.runOnUiThread(java.lang.Runnable {

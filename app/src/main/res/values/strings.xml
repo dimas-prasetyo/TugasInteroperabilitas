@@ -2,8 +2,8 @@
     <string name="app_name">TugasInteroperabilitas</string>
 
     <string name="pertanyaan_1">Apakah ada kontak dengan orang yang sedang dalam pemeriksaan/terkonfirmasi/sedang dalam perawatan karena penyakit COVID-19 dalam waktu 14 hari terakhir?</string>
-    <string name="pertanyaan_2">Jika pertanyaan nomor 1 (satu) Ya dan mengalami gejala demam batuk/pilek/sesak napas dalam 7 hari terakhir?</string>
-    <string name="pertanyaan_3">Apakah Anda pernah terkonfirmasi menderita COVID-19?</string>
+    <string name="pertanyaan_2">Apakah anda mengalami gejala demam batuk/pilek/sesak napas dalam 7 hari terakhir?</string>
+    <string name="pertanyaan_3">Apakah Anda pernah terkonfirmasi menderita COVID-19 (dalam 14 hari terakhir)?</string>
     <string name="pertanyaan_4">Apakah Anda sedang hamil?</string>
     <string name="pertanyaan_5_1">Apakah Anda memiliki riwayat alergi berat seperti sesak napas, bengkak dan urtikaria seluruh badan atau reaksi berat lainnya karena vaksin?</string>
     <string name="pertanyaan_5_2">Apakah Anda memiliki riwayat alergi berat atau mengalami gejala sesak napas, bengkak dan urtikaria seluruh badan setelah divaksinasi COVID-19 sebelumnya?</string>

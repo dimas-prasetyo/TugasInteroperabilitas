@@ -18,6 +18,11 @@ interface DatabaseRequest {
         @Field("id") id: Int): Call<RumahSakit>
 
     @FormUrlEncoded
+    @POST("rumah_sakit_load_stok.php")
+    fun loadRumahSakitStok(
+            @Field("id") id: Int): Call<RumahSakit>
+
+    @FormUrlEncoded
     @POST("rumah_sakit_edit_vaksin.php")
     fun updateStokVaksin(
         @Field("id") id: Int,

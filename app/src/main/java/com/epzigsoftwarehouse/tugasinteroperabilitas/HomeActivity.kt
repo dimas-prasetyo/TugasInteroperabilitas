@@ -25,11 +25,13 @@ class HomeActivity : AppCompatActivity() {
 
         card_view_rumah_sakit.setOnClickListener {
             val intent = Intent(this, RumahSakitListActivity::class.java)
+            intent.putExtra("nik", "0")
             startActivity(intent)
         }
 
         card_view_registrasi.setOnClickListener {
             val intent = Intent(this, DaftarVaksinasiActivity::class.java)
+            intent.putExtra("id", "0")
             startActivity(intent)
         }
 

@@ -12,6 +12,7 @@ import retrofit2.awaitResponse
 
 class FormSkriningActivity : AppCompatActivity() {
     private lateinit var nik_peserta: String
+    private var id_rumah_sakit = 0
     private var status_vaksin_1 = 0
     private var status_vaksin_2 = 0
 
@@ -23,6 +24,7 @@ class FormSkriningActivity : AppCompatActivity() {
             onBackPressed()
         }
 
+        id_rumah_sakit = intent.getStringExtra("id").toString().toInt()
         nik_peserta = intent.getStringExtra("nik").toString()
 
         loadPendudukDetail()
@@ -31,6 +33,7 @@ class FormSkriningActivity : AppCompatActivity() {
         btn_selanjutnya.setOnClickListener {
             val intent = Intent(this, FormDaftarActivity::class.java)
             intent.putExtra("nik", nik_peserta)
+            intent.putExtra("id", id_rumah_sakit.toString())
             startActivity(intent)
         }
     }
@@ -107,6 +110,12 @@ class FormSkriningActivity : AppCompatActivity() {
                                 txt_p4.text = "Ya"
                             } else {
                                 txt_p4.text = "Tidak"
+                            }
+
+                            if (data.vaksin_1 == 1){
+                                txt_pertanyaan_5.setText(resources.getString(R.string.skrining_5_2))
+                            } else {
+                                txt_pertanyaan_5.setText(resources.getString(R.string.skrining_5_1))
                             }
 
                             if (data.p5 == 0){
@@ -190,4 +199,12 @@ class FormSkriningActivity : AppCompatActivity() {
             }
         }
     }
+
+    /*override fun onBackPressed() {
+        val intent = Intent(this, RumahSakitListActivity::class.java)
+        intent.putExtra("nik", nik_peserta)
+        intent.putExtra("id", "0")
+        startActivity(intent)
+        finish()
+    }*/
 }
