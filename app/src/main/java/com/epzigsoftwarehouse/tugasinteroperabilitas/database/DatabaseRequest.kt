@@ -3,6 +3,7 @@ package com.epzigsoftwarehouse.tugasinteroperabilitas.database
 import com.epzigsoftwarehouse.tugasinteroperabilitas.RumahSakit.RumahSakit
 import com.epzigsoftwarehouse.tugasinteroperabilitas.penduduk.Penduduk
 import com.epzigsoftwarehouse.tugasinteroperabilitas.skrining.Skrining
+import com.epzigsoftwarehouse.tugasinteroperabilitas.vaksinasi.Vaksinasi
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -26,7 +27,7 @@ interface DatabaseRequest {
     @POST("rumah_sakit_edit_vaksin.php")
     fun updateStokVaksin(
         @Field("id") id: Int,
-        @Field("stok") p13: Int): Call<RumahSakit>
+        @Field("stok") stok: Int): Call<RumahSakit>
 
     // Skrining
     @FormUrlEncoded
@@ -54,6 +55,19 @@ interface DatabaseRequest {
         @Field("p12") p12: Int,
         @Field("p13") p13: Int): Call<Skrining>
 
+    // Vaksinasi
+    @FormUrlEncoded
+    @POST("vaksinasi_cek.php")
+    fun loadRiwayatVaksinasi(
+            @Field("nik") nik: String): Call<Vaksinasi>
+
+    @FormUrlEncoded
+    @POST("vaksinasi_input.php")
+    fun inputRiwayatVaksin(
+            @Field("nik") nik: String,
+            @Field("rs_id") rs_id: Int,
+            @Field("vaksin") vaksin: Int,
+            @Field("jenis") jenis: String): Call<Vaksinasi>
 
     // Penduduk
     @FormUrlEncoded

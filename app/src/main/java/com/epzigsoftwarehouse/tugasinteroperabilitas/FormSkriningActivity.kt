@@ -27,8 +27,7 @@ class FormSkriningActivity : AppCompatActivity() {
         id_rumah_sakit = intent.getStringExtra("id").toString().toInt()
         nik_peserta = intent.getStringExtra("nik").toString()
 
-        loadPendudukDetail()
-        loadHasilSkrining()
+        refreshPage()
 
         btn_selanjutnya.setOnClickListener {
             val intent = Intent(this, FormDaftarActivity::class.java)
@@ -36,6 +35,11 @@ class FormSkriningActivity : AppCompatActivity() {
             intent.putExtra("id", id_rumah_sakit.toString())
             startActivity(intent)
         }
+    }
+
+    private fun refreshPage() {
+        loadPendudukDetail()
+        loadHasilSkrining()
     }
 
     private fun loadPendudukDetail() {
@@ -200,6 +204,10 @@ class FormSkriningActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        refreshPage()
+        super.onResume()
+    }
     /*override fun onBackPressed() {
         val intent = Intent(this, RumahSakitListActivity::class.java)
         intent.putExtra("nik", nik_peserta)

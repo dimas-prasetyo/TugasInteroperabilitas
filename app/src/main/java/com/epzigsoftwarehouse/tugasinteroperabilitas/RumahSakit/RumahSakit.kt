@@ -10,6 +10,7 @@ data class RumahSakit(
         val keterangan: String,
         val waktu: String,
         val stok: Int,
+        val jenis: String,
         val success: Boolean,
         val message: String
 )

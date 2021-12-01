@@ -25,8 +25,10 @@ import retrofit2.awaitResponse
 class FormDaftarActivity : AppCompatActivity() {
     private lateinit var nik_peserta: String
     private lateinit var ket_rs: String
+    private lateinit var jenis_vaksin: String
     private var id_rumah_sakit = 0
     private var stok_vaksin = 0
+    private var status_vaksin = 0
     private var status_vaksin_1 = 0
     private var status_vaksin_2 = 0
     private var radioButton: RadioButton? = null
@@ -224,6 +226,7 @@ class FormDaftarActivity : AppCompatActivity() {
 
                     stok_vaksin = data.stok
                     ket_rs = data.keterangan
+                    jenis_vaksin = data.jenis
                     cekHasilForm()
                 }
             } catch (e: Exception){
@@ -301,13 +304,7 @@ class FormDaftarActivity : AppCompatActivity() {
                         Picasso.get()
                                 .load(R.drawable.icon_done)
                                 .into(image_hasil)
-
-                        popUpHasil.show()
-
-                        Handler().postDelayed({
-                            popUpHasil.dismiss()
-                            updateHasilSkrining()
-                        }, 5000)
+                        updateHasilSkrining()
 
                     } else {
                         text_hasil.text = "Maaf silahkan pilih Rumah Sakit untuk lokasi vaksinasi"
@@ -334,13 +331,8 @@ class FormDaftarActivity : AppCompatActivity() {
                     Picasso.get()
                             .load(R.drawable.icon_done)
                             .into(image_hasil)
+                    updateHasilSkrining()
 
-                    popUpHasil.show()
-
-                    Handler().postDelayed({
-                        popUpHasil.dismiss()
-                        updateHasilSkrining()
-                    }, 5000)
                 }
 
             })
@@ -352,9 +344,11 @@ class FormDaftarActivity : AppCompatActivity() {
         if (status_vaksin_1 == 0){
             status_vaksin_1 = 1
             status_vaksin_2 = 0
+            status_vaksin = 1
         } else {
             status_vaksin_1 = 1
             status_vaksin_2 = 1
+            status_vaksin = 2
         }
 
         // get selected radio button from radioGroup
@@ -421,6 +415,22 @@ class FormDaftarActivity : AppCompatActivity() {
                 if (response.isSuccessful && response.body() != null) {
                     val data = response.body()!!
 
+                    inputRiwayatVaksin()
+                }
+            } catch (e: Exception){
+                println("Context: " + this + "\n Error: " + e)
+                e.printStackTrace()
+            }
+        }
+    }
+
+    private fun inputRiwayatVaksin() {
+        GlobalScope.launch(Dispatchers.IO){
+            try {
+                val response = DatabaseClient.inputRiwayatVaksin(nik_peserta, id_rumah_sakit, status_vaksin, jenis_vaksin).awaitResponse()
+                if (response.isSuccessful && response.body() != null) {
+                    val data = response.body()!!
+
                     updateJumalahVaksin()
                 }
             } catch (e: Exception){
@@ -431,7 +441,31 @@ class FormDaftarActivity : AppCompatActivity() {
     }
 
     private fun updateJumalahVaksin() {
+        var new_stok = stok_vaksin - 1
+        println("stok vaskin: " + stok_vaksin)
+        println("stok vaskin baru:  " + new_stok)
+        GlobalScope.launch(Dispatchers.IO){
+            try {
+                val response = DatabaseClient.updateStokVaksin(id_rumah_sakit, new_stok).awaitResponse()
+                if (response.isSuccessful && response.body() != null) {
+                    val data = response.body()!!
 
+                    Thread(Runnable {
+                        this@FormDaftarActivity?.runOnUiThread(java.lang.Runnable {
+                            popUpHasil.show()
+
+                            Handler().postDelayed({
+                                popUpHasil.dismiss()
+                                onBackPressed()
+                            }, 5000)
+                        })
+                    }).start()
+                }
+            } catch (e: Exception){
+                println("Context: " + this + "\n Error: " + e)
+                e.printStackTrace()
+            }
+        }
     }
 
     /*override fun onBackPressed() {

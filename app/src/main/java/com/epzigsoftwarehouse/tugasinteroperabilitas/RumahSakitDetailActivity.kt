@@ -52,12 +52,12 @@ class RumahSakitDetailActivity : AppCompatActivity() {
                 if (response.isSuccessful && response.body() != null) {
                     val data = response.body()!!
 
-
                     Thread(Runnable {
                         this@RumahSakitDetailActivity?.runOnUiThread(java.lang.Runnable {
                             nama_rumah_sakit.text = data.nama
                             alamat.text = data.alamat
                             stok_vaksin.text = "Stok: " + data.stok + " Vaksin"
+                            jenis_vaksin.text = data.jenis
 
                             Picasso.get()
                                 .load(data.gambar)

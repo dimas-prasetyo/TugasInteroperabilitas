@@ -76,14 +76,24 @@
 
             <TextView
                 android:id="@+id/stok_vaksin"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Stok: 100 Vaksin"
                 android:textSize="20sp"
                 style="@style/textPrimary"
                 android:textStyle="bold"
                 android:layout_below="@id/alamat"
                 android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/jenis_vaksin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jenis Vaksin"
+                android:textSize="18sp"
+                style="@style/textSecondary"
+                android:textStyle="bold"
+                android:layout_below="@id/stok_vaksin"/>
 
         </RelativeLayout>
 
